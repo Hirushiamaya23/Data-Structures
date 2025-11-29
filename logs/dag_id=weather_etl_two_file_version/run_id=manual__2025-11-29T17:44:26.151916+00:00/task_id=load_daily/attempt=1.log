@@ -1,0 +1,51 @@
+[2025-11-29T19:44:34.060+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-29T19:44:34.066+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_etl_two_file_version.load_daily manual__2025-11-29T17:44:26.151916+00:00 [queued]>
+[2025-11-29T19:44:34.068+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_etl_two_file_version.load_daily manual__2025-11-29T17:44:26.151916+00:00 [queued]>
+[2025-11-29T19:44:34.068+0200] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-29T19:44:34.072+0200] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_daily> on 2025-11-29 17:44:26.151916+00:00
+[2025-11-29T19:44:34.075+0200] {standard_task_runner.py:63} INFO - Started process 94278 to run task
+[2025-11-29T19:44:34.077+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'weather_etl_two_file_version', 'load_daily', 'manual__2025-11-29T17:44:26.151916+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/airflow_dag_weather_etl.py', '--cfg-path', '/var/folders/zz/brhm15n96xd12sx6bmrb3clr0000gn/T/tmpc40ffd1v']
+[2025-11-29T19:44:34.078+0200] {standard_task_runner.py:91} INFO - Job 68: Subtask load_daily
+[2025-11-29T19:44:34.094+0200] {task_command.py:426} INFO - Running <TaskInstance: weather_etl_two_file_version.load_daily manual__2025-11-29T17:44:26.151916+00:00 [running]> on host hirushis-macbook-air.local
+[2025-11-29T19:44:34.113+0200] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='weather_team' AIRFLOW_CTX_DAG_ID='weather_etl_two_file_version' AIRFLOW_CTX_TASK_ID='load_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-11-29T17:44:26.151916+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-29T17:44:26.151916+00:00'
+[2025-11-29T19:44:34.114+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-29T19:44:34.124+0200] {logging_mixin.py:188} WARNING - /Users/hirushipeiris/airflow_new/dags/etl_functions.py:136 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2025-11-29T19:44:34.125+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-29T19:44:34.125+0200] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/hirushipeiris/airflow_new/dags/airflow_dag_weather_etl.py", line 56, in run_load_daily
+    load_daily(path)
+  File "/Users/hirushipeiris/airflow_new/dags/etl_functions.py", line 136, in load_daily
+    df.to_sql(
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/core/generic.py", line 3109, in to_sql
+    return sql.to_sql(
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/io/sql.py", line 844, in to_sql
+    return pandas_sql.to_sql(
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/io/sql.py", line 2840, in to_sql
+    table.create()
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/io/sql.py", line 986, in create
+    if self.exists():
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/io/sql.py", line 972, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/io/sql.py", line 2855, in has_table
+    return len(self.execute(query, [name]).fetchall()) > 0
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/io/sql.py", line 2662, in execute
+    cur = self.con.cursor()
+AttributeError: 'Engine' object has no attribute 'cursor'
+[2025-11-29T19:44:34.133+0200] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=weather_etl_two_file_version, task_id=load_daily, run_id=manual__2025-11-29T17:44:26.151916+00:00, execution_date=20251129T174426, start_date=20251129T174434, end_date=20251129T174434
+[2025-11-29T19:44:34.138+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 68 for task load_daily ('Engine' object has no attribute 'cursor'; 94278)
+[2025-11-29T19:44:34.181+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-11-29T19:44:34.186+0200] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-29T19:44:34.187+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

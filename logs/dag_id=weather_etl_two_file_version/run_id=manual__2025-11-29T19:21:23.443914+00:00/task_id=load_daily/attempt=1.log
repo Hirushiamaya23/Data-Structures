@@ -1,0 +1,17 @@
+[2025-11-29T21:21:31.123+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-29T21:21:31.128+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_etl_two_file_version.load_daily manual__2025-11-29T19:21:23.443914+00:00 [queued]>
+[2025-11-29T21:21:31.131+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_etl_two_file_version.load_daily manual__2025-11-29T19:21:23.443914+00:00 [queued]>
+[2025-11-29T21:21:31.131+0200] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-29T21:21:31.134+0200] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_daily> on 2025-11-29 19:21:23.443914+00:00
+[2025-11-29T21:21:31.137+0200] {standard_task_runner.py:63} INFO - Started process 28459 to run task
+[2025-11-29T21:21:31.140+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'weather_etl_two_file_version', 'load_daily', 'manual__2025-11-29T19:21:23.443914+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/airflow_dag_weather_etl.py', '--cfg-path', '/var/folders/zz/brhm15n96xd12sx6bmrb3clr0000gn/T/tmp4i0dy5l9']
+[2025-11-29T21:21:31.140+0200] {standard_task_runner.py:91} INFO - Job 95: Subtask load_daily
+[2025-11-29T21:21:31.155+0200] {task_command.py:426} INFO - Running <TaskInstance: weather_etl_two_file_version.load_daily manual__2025-11-29T19:21:23.443914+00:00 [running]> on host hirushis-macbook-air.local
+[2025-11-29T21:21:31.174+0200] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='weather_team' AIRFLOW_CTX_DAG_ID='weather_etl_two_file_version' AIRFLOW_CTX_TASK_ID='load_daily' AIRFLOW_CTX_EXECUTION_DATE='2025-11-29T19:21:23.443914+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-29T19:21:23.443914+00:00'
+[2025-11-29T21:21:31.175+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-29T21:21:31.189+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-11-29T21:21:31.189+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-29T21:21:31.191+0200] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=weather_etl_two_file_version, task_id=load_daily, run_id=manual__2025-11-29T19:21:23.443914+00:00, execution_date=20251129T192123, start_date=20251129T192131, end_date=20251129T192131
+[2025-11-29T21:21:31.201+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-29T21:21:31.206+0200] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-29T21:21:31.206+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

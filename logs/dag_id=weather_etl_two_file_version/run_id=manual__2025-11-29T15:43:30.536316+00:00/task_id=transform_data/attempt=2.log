@@ -1,0 +1,41 @@
+[2025-11-29T17:45:37.460+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-29T17:45:37.466+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_etl_two_file_version.transform_data manual__2025-11-29T15:43:30.536316+00:00 [queued]>
+[2025-11-29T17:45:37.468+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_etl_two_file_version.transform_data manual__2025-11-29T15:43:30.536316+00:00 [queued]>
+[2025-11-29T17:45:37.468+0200] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-11-29T17:45:37.472+0200] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transform_data> on 2025-11-29 15:43:30.536316+00:00
+[2025-11-29T17:45:37.475+0200] {standard_task_runner.py:63} INFO - Started process 46996 to run task
+[2025-11-29T17:45:37.479+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'weather_etl_two_file_version', 'transform_data', 'manual__2025-11-29T15:43:30.536316+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/airflow_dag_weather_etl.py', '--cfg-path', '/var/folders/zz/brhm15n96xd12sx6bmrb3clr0000gn/T/tmpt038h18y']
+[2025-11-29T17:45:37.481+0200] {standard_task_runner.py:91} INFO - Job 19: Subtask transform_data
+[2025-11-29T17:45:37.496+0200] {task_command.py:426} INFO - Running <TaskInstance: weather_etl_two_file_version.transform_data manual__2025-11-29T15:43:30.536316+00:00 [running]> on host hirushis-macbook-air.local
+[2025-11-29T17:45:37.515+0200] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='weather_team' AIRFLOW_CTX_DAG_ID='weather_etl_two_file_version' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-11-29T15:43:30.536316+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-29T15:43:30.536316+00:00'
+[2025-11-29T17:45:37.516+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-29T17:45:38.554+0200] {logging_mixin.py:188} WARNING - /Users/hirushipeiris/airflow_new/dags/etl_functions.py:52 FutureWarning: In a future version of pandas, parsing datetimes with mixed time zones will raise an error unless `utc=True`. Please specify `utc=True` to opt in to the new behaviour and silence this warning. To create a `Series` with mixed offsets and `object` dtype, please use `apply` and `datetime.datetime.strptime`
+[2025-11-29T17:45:38.654+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-29T17:45:38.655+0200] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/hirushipeiris/airflow_new/dags/airflow_dag_weather_etl.py", line 33, in run_transform
+    daily, monthly = transform(csv)
+  File "/Users/hirushipeiris/airflow_new/dags/etl_functions.py", line 62, in transform
+    daily = df.resample("D").mean().reset_index()
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/core/generic.py", line 9834, in resample
+    return get_resampler(
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/core/resample.py", line 2044, in get_resampler
+    return tg._get_resampler(obj, kind=kind)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/pandas/core/resample.py", line 2258, in _get_resampler
+    raise TypeError(
+TypeError: Only valid with DatetimeIndex, TimedeltaIndex or PeriodIndex, but got an instance of 'Index'
+[2025-11-29T17:45:38.662+0200] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=weather_etl_two_file_version, task_id=transform_data, run_id=manual__2025-11-29T15:43:30.536316+00:00, execution_date=20251129T154330, start_date=20251129T154537, end_date=20251129T154538
+[2025-11-29T17:45:38.665+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 19 for task transform_data (Only valid with DatetimeIndex, TimedeltaIndex or PeriodIndex, but got an instance of 'Index'; 46996)
+[2025-11-29T17:45:38.711+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-11-29T17:45:38.719+0200] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-29T17:45:38.721+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

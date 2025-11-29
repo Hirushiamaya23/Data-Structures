@@ -1,0 +1,20 @@
+[2025-11-29T19:31:50.575+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-29T19:31:50.585+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_etl_two_file_version.transform_data manual__2025-11-29T17:31:44.585966+00:00 [queued]>
+[2025-11-29T19:31:50.588+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_etl_two_file_version.transform_data manual__2025-11-29T17:31:44.585966+00:00 [queued]>
+[2025-11-29T19:31:50.588+0200] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-11-29T19:31:50.595+0200] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transform_data> on 2025-11-29 17:31:44.585966+00:00
+[2025-11-29T19:31:50.598+0200] {standard_task_runner.py:63} INFO - Started process 89116 to run task
+[2025-11-29T19:31:50.603+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'weather_etl_two_file_version', 'transform_data', 'manual__2025-11-29T17:31:44.585966+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/airflow_dag_weather_etl.py', '--cfg-path', '/var/folders/zz/brhm15n96xd12sx6bmrb3clr0000gn/T/tmp4f3_pll3']
+[2025-11-29T19:31:50.605+0200] {standard_task_runner.py:91} INFO - Job 57: Subtask transform_data
+[2025-11-29T19:31:50.631+0200] {task_command.py:426} INFO - Running <TaskInstance: weather_etl_two_file_version.transform_data manual__2025-11-29T17:31:44.585966+00:00 [running]> on host hirushis-macbook-air.local
+[2025-11-29T19:31:50.663+0200] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='weather_team' AIRFLOW_CTX_DAG_ID='weather_etl_two_file_version' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-11-29T17:31:44.585966+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-29T17:31:44.585966+00:00'
+[2025-11-29T19:31:50.664+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-29T19:31:51.454+0200] {logging_mixin.py:188} WARNING - /Users/hirushipeiris/airflow_new/dags/etl_functions.py:85 FutureWarning: 'M' is deprecated and will be removed in a future version, please use 'ME' instead.
+[2025-11-29T19:31:51.470+0200] {logging_mixin.py:188} WARNING - /Users/hirushipeiris/airflow_new/dags/etl_functions.py:86 UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+[2025-11-29T19:31:51.472+0200] {logging_mixin.py:188} WARNING - /Users/hirushipeiris/airflow_new/dags/etl_functions.py:90 UserWarning: Converting to PeriodArray/Index representation will drop timezone information.
+[2025-11-29T19:31:51.510+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-11-29T19:31:51.511+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-29T19:31:51.514+0200] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=weather_etl_two_file_version, task_id=transform_data, run_id=manual__2025-11-29T17:31:44.585966+00:00, execution_date=20251129T173144, start_date=20251129T173150, end_date=20251129T173151
+[2025-11-29T19:31:51.549+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-29T19:31:51.563+0200] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-29T19:31:51.564+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

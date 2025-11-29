@@ -1,0 +1,32 @@
+[2025-11-29T17:05:25.698+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-29T17:05:25.704+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_etl_two_file_version.extract_data manual__2025-11-29T15:03:21.273633+00:00 [queued]>
+[2025-11-29T17:05:25.706+0200] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_etl_two_file_version.extract_data manual__2025-11-29T15:03:21.273633+00:00 [queued]>
+[2025-11-29T17:05:25.706+0200] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-11-29T17:05:25.709+0200] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_data> on 2025-11-29 15:03:21.273633+00:00
+[2025-11-29T17:05:25.712+0200] {standard_task_runner.py:63} INFO - Started process 30627 to run task
+[2025-11-29T17:05:25.716+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'weather_etl_two_file_version', 'extract_data', 'manual__2025-11-29T15:03:21.273633+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/airflow_dag_weather_etl.py', '--cfg-path', '/var/folders/zz/brhm15n96xd12sx6bmrb3clr0000gn/T/tmparlfzj5w']
+[2025-11-29T17:05:25.717+0200] {standard_task_runner.py:91} INFO - Job 14: Subtask extract_data
+[2025-11-29T17:05:25.735+0200] {task_command.py:426} INFO - Running <TaskInstance: weather_etl_two_file_version.extract_data manual__2025-11-29T15:03:21.273633+00:00 [running]> on host hirushis-macbook-air.local
+[2025-11-29T17:05:25.753+0200] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='weather_team' AIRFLOW_CTX_DAG_ID='weather_etl_two_file_version' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-11-29T15:03:21.273633+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-29T15:03:21.273633+00:00'
+[2025-11-29T17:05:25.754+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-29T17:05:25.754+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-29T17:05:25.754+0200] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/hirushipeiris/airflow_new/dags/etl_functions.py", line 45, in extract
+    raise FileNotFoundError("weatherHistory.csv not found!")
+FileNotFoundError: weatherHistory.csv not found!
+[2025-11-29T17:05:25.757+0200] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=weather_etl_two_file_version, task_id=extract_data, run_id=manual__2025-11-29T15:03:21.273633+00:00, execution_date=20251129T150321, start_date=20251129T150525, end_date=20251129T150525
+[2025-11-29T17:05:25.760+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 14 for task extract_data (weatherHistory.csv not found!; 30627)
+[2025-11-29T17:05:25.777+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-11-29T17:05:25.784+0200] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-29T17:05:25.785+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
