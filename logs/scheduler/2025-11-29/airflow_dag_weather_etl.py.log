@@ -1331,3 +1331,10 @@ ModuleNotFoundError: No module named 'numpy'
 [2025-11-29T21:30:55.721+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:30:55.720+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-11-29T21:30:55.724+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:30:55.724+0200] {dag.py:3954} INFO - Setting next_dagrun for weather_etl_two_file_version to None, run_after=None
 [2025-11-29T21:30:55.732+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/airflow_new/dags/airflow_dag_weather_etl.py took 0.373 seconds
+[2025-11-29T21:32:41.840+0200] {processor.py:161} INFO - Started process (PID=33495) to work on /Users/hirushipeiris/airflow_new/dags/airflow_dag_weather_etl.py
+[2025-11-29T21:32:41.841+0200] {processor.py:830} INFO - Processing file /Users/hirushipeiris/airflow_new/dags/airflow_dag_weather_etl.py for tasks to queue
+[2025-11-29T21:32:41.841+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:32:41.841+0200] {dagbag.py:545} INFO - Filling up the DagBag from /Users/hirushipeiris/airflow_new/dags/airflow_dag_weather_etl.py
+[2025-11-29T21:32:42.108+0200] {processor.py:840} INFO - DAG(s) 'weather_etl_two_file_version' retrieved from /Users/hirushipeiris/airflow_new/dags/airflow_dag_weather_etl.py
+[2025-11-29T21:32:42.139+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:32:42.139+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-11-29T21:32:42.142+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:32:42.142+0200] {dag.py:3954} INFO - Setting next_dagrun for weather_etl_two_file_version to None, run_after=None
+[2025-11-29T21:32:42.149+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/airflow_new/dags/airflow_dag_weather_etl.py took 0.310 seconds

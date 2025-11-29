@@ -1661,3 +1661,10 @@
 [2025-11-29T21:30:27.592+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:30:27.592+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-11-29T21:30:27.595+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:30:27.595+0200] {dag.py:3954} INFO - Setting next_dagrun for example_time_delta_sensor_async to None, run_after=None
 [2025-11-29T21:30:27.601+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_time_delta_sensor_async.py took 0.051 seconds
+[2025-11-29T21:32:14.147+0200] {processor.py:161} INFO - Started process (PID=33330) to work on /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_time_delta_sensor_async.py
+[2025-11-29T21:32:14.148+0200] {processor.py:830} INFO - Processing file /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_time_delta_sensor_async.py for tasks to queue
+[2025-11-29T21:32:14.149+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:32:14.149+0200] {dagbag.py:545} INFO - Filling up the DagBag from /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_time_delta_sensor_async.py
+[2025-11-29T21:32:14.152+0200] {processor.py:840} INFO - DAG(s) 'example_time_delta_sensor_async' retrieved from /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_time_delta_sensor_async.py
+[2025-11-29T21:32:14.187+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:32:14.187+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-11-29T21:32:14.190+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:32:14.190+0200] {dag.py:3954} INFO - Setting next_dagrun for example_time_delta_sensor_async to None, run_after=None
+[2025-11-29T21:32:14.198+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_time_delta_sensor_async.py took 0.052 seconds

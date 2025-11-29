@@ -1548,3 +1548,13 @@ ModuleNotFoundError: No module named 'numpy'
 [2025-11-29T21:30:57.400+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:30:57.400+0200] {dagbag.py:545} INFO - Filling up the DagBag from /Users/hirushipeiris/airflow_new/dags/etl_functions.py
 [2025-11-29T21:30:57.599+0200] {processor.py:842} WARNING - No viable dags retrieved from /Users/hirushipeiris/airflow_new/dags/etl_functions.py
 [2025-11-29T21:30:57.628+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/airflow_new/dags/etl_functions.py took 0.232 seconds
+[2025-11-29T21:31:50.880+0200] {processor.py:161} INFO - Started process (PID=33152) to work on /Users/hirushipeiris/airflow_new/dags/etl_functions.py
+[2025-11-29T21:31:50.882+0200] {processor.py:830} INFO - Processing file /Users/hirushipeiris/airflow_new/dags/etl_functions.py for tasks to queue
+[2025-11-29T21:31:50.882+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:31:50.882+0200] {dagbag.py:545} INFO - Filling up the DagBag from /Users/hirushipeiris/airflow_new/dags/etl_functions.py
+[2025-11-29T21:31:51.140+0200] {processor.py:842} WARNING - No viable dags retrieved from /Users/hirushipeiris/airflow_new/dags/etl_functions.py
+[2025-11-29T21:31:51.167+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/airflow_new/dags/etl_functions.py took 0.288 seconds
+[2025-11-29T21:32:43.752+0200] {processor.py:161} INFO - Started process (PID=33507) to work on /Users/hirushipeiris/airflow_new/dags/etl_functions.py
+[2025-11-29T21:32:43.753+0200] {processor.py:830} INFO - Processing file /Users/hirushipeiris/airflow_new/dags/etl_functions.py for tasks to queue
+[2025-11-29T21:32:43.754+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:32:43.754+0200] {dagbag.py:545} INFO - Filling up the DagBag from /Users/hirushipeiris/airflow_new/dags/etl_functions.py
+[2025-11-29T21:32:43.944+0200] {processor.py:842} WARNING - No viable dags retrieved from /Users/hirushipeiris/airflow_new/dags/etl_functions.py
+[2025-11-29T21:32:43.971+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/airflow_new/dags/etl_functions.py took 0.219 seconds

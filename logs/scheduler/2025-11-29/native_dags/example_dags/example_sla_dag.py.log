@@ -1416,3 +1416,10 @@
 [2025-11-29T21:31:23.447+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:31:23.447+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-11-29T21:31:23.454+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:31:23.454+0200] {dag.py:3954} INFO - Setting next_dagrun for example_sla_dag to 2025-11-29 19:28:00+00:00, run_after=2025-11-29 19:30:00+00:00
 [2025-11-29T21:31:23.460+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sla_dag.py took 0.085 seconds
+[2025-11-29T21:33:07.594+0200] {processor.py:161} INFO - Started process (PID=33645) to work on /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-11-29T21:33:07.594+0200] {processor.py:830} INFO - Processing file /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2025-11-29T21:33:07.595+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:33:07.595+0200] {dagbag.py:545} INFO - Filling up the DagBag from /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-11-29T21:33:07.611+0200] {processor.py:840} INFO - DAG(s) 'example_sla_dag' retrieved from /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sla_dag.py
+[2025-11-29T21:33:07.661+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:33:07.661+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-11-29T21:33:07.668+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:33:07.668+0200] {dag.py:3954} INFO - Setting next_dagrun for example_sla_dag to 2025-11-29 19:30:00+00:00, run_after=2025-11-29 19:32:00+00:00
+[2025-11-29T21:33:07.674+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sla_dag.py took 0.082 seconds

@@ -1360,3 +1360,17 @@
 [2025-11-29T21:29:52.232+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:29:52.231+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-11-29T21:29:52.235+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:29:52.234+0200] {dag.py:3954} INFO - Setting next_dagrun for example_sensor_decorator to None, run_after=None
 [2025-11-29T21:29:52.241+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py took 0.078 seconds
+[2025-11-29T21:31:35.116+0200] {processor.py:161} INFO - Started process (PID=32995) to work on /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2025-11-29T21:31:35.117+0200] {processor.py:830} INFO - Processing file /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py for tasks to queue
+[2025-11-29T21:31:35.117+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:31:35.117+0200] {dagbag.py:545} INFO - Filling up the DagBag from /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2025-11-29T21:31:35.132+0200] {processor.py:840} INFO - DAG(s) 'example_sensor_decorator' retrieved from /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2025-11-29T21:31:35.183+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:31:35.183+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-11-29T21:31:35.186+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:31:35.186+0200] {dag.py:3954} INFO - Setting next_dagrun for example_sensor_decorator to None, run_after=None
+[2025-11-29T21:31:35.192+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py took 0.077 seconds
+[2025-11-29T21:33:17.563+0200] {processor.py:161} INFO - Started process (PID=33707) to work on /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2025-11-29T21:33:17.565+0200] {processor.py:830} INFO - Processing file /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py for tasks to queue
+[2025-11-29T21:33:17.565+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:33:17.565+0200] {dagbag.py:545} INFO - Filling up the DagBag from /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2025-11-29T21:33:17.580+0200] {processor.py:840} INFO - DAG(s) 'example_sensor_decorator' retrieved from /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2025-11-29T21:33:17.632+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:33:17.632+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-11-29T21:33:17.635+0200] {logging_mixin.py:188} INFO - [2025-11-29T21:33:17.635+0200] {dag.py:3954} INFO - Setting next_dagrun for example_sensor_decorator to None, run_after=None
+[2025-11-29T21:33:17.641+0200] {processor.py:183} INFO - Processing /Users/hirushipeiris/miniconda3/envs/airflow_env/lib/python3.9/site-packages/airflow/example_dags/example_sensor_decorator.py took 0.079 seconds
